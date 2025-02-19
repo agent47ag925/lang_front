@@ -16,25 +16,7 @@ def main():
     
     # 탭 생성
     tab2 = st.tabs(["일반 챗"])
-    
-    # with tab1:
-    #     st.header("🎙️ 음성 챗")
-    #     st.write("여기에 음성 채팅 기능을 추가하세요.")
 
-    #     if st.button("🎤 음성 입력 시작"):
-    #         user_input = recognize_speech()  # 음성 인식W
-    
-    #         response = requests.post(url = f"{FASTAPI_URL}/voice", 
-    #                                     data = json.dumps({'inputs':user_input}))       
-            
-    #         #print(response -> <200>)
-    #         st.write(f"{response.json()}")
-        
-    #     else:
-    #         user_input = ""
-    #         st.write(f"음성 인식 버튼을 다시 누르고 말해보세요.")
-
-    
     with tab2:
         # CSS 스타일 추가 (말풍선 디자인)
         st.markdown(
@@ -125,6 +107,26 @@ def main():
 
             # UI 업데이트
             st.rerun()
+    
+    # with tab1:
+    #     st.header("🎙️ 음성 챗")
+    #     st.write("여기에 음성 채팅 기능을 추가하세요.")
+
+    #     if st.button("🎤 음성 입력 시작"):
+    #         user_input = recognize_speech()  # 음성 인식W
+    
+    #         response = requests.post(url = f"{FASTAPI_URL}/voice", 
+    #                                     data = json.dumps({'inputs':user_input}))       
+            
+    #         #print(response -> <200>)
+    #         st.write(f"{response.json()}")
+        
+    #     else:
+    #         user_input = ""
+    #         st.write(f"음성 인식 버튼을 다시 누르고 말해보세요.")
+
+    
+    
 
 #클라우드 배포는 tab2까지..
     # with tab3:
