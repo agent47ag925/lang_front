@@ -9,30 +9,30 @@ import requests #fastapi와 streamlit을 합치기 위한 requests(내부에서 
 #음성인식라이브러리 추가
 import speech_recognition as sr  # 음성 인식을 위한 라이브러리
 
-FASTAPI_URL = os.environ.get("FASTAPI_URL", "https://lang-backend-d0e71d3434e0.herokuapp.com/")
+FASTAPI_URL = os.environ.get("FASTAPI_URL", "https://lang-back-356d846bc65f.herokuapp.com/")
 
 def main():
     st.set_page_config(page_title="MyGPT", layout="wide")
     
     # 탭 생성
-    tab1, tab2 = st.tabs(["음성 챗", "일반 챗"])
+    tab2 = st.tabs(["일반 챗"])
     
-    with tab1:
-        st.header("🎙️ 음성 챗")
-        st.write("여기에 음성 채팅 기능을 추가하세요.")
+    # with tab1:
+    #     st.header("🎙️ 음성 챗")
+    #     st.write("여기에 음성 채팅 기능을 추가하세요.")
 
-        if st.button("🎤 음성 입력 시작"):
-            user_input = recognize_speech()  # 음성 인식W
+    #     if st.button("🎤 음성 입력 시작"):
+    #         user_input = recognize_speech()  # 음성 인식W
     
-            response = requests.post(url = f"{FASTAPI_URL}/voice", 
-                                        data = json.dumps({'inputs':user_input}))       
+    #         response = requests.post(url = f"{FASTAPI_URL}/voice", 
+    #                                     data = json.dumps({'inputs':user_input}))       
             
-            #print(response -> <200>)
-            st.write(f"{response.json()}")
+    #         #print(response -> <200>)
+    #         st.write(f"{response.json()}")
         
-        else:
-            user_input = ""
-            st.write(f"음성 인식 버튼을 다시 누르고 말해보세요.")
+    #     else:
+    #         user_input = ""
+    #         st.write(f"음성 인식 버튼을 다시 누르고 말해보세요.")
 
     
     with tab2:
