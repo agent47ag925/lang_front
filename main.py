@@ -15,7 +15,7 @@ def main():
     st.set_page_config(page_title="MyGPT", layout="wide")
     
     # 탭 생성
-    tab2 = st.tabs(["일반 챗"])
+    tab2 = st.tabs(["일반 챗"])[0]
 
     with tab2:
         # CSS 스타일 추가 (말풍선 디자인)
